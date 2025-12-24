@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -10,12 +11,9 @@ const Home = () => {
         
         {/* --- Profile Image Section Start --- */}
         <div className="img-container">
-            {/* Make sure the path matches your file location */}
-            <img 
-                src="/src/assets/profile.jpg" 
-                alt="Janith Kuruppu" 
-                className="profile-img" 
-            />
+            {/* මෙන්න අපි වෙනස් කරපු කොටස */}
+            {/* ඔයාගේ ෆොටෝ එකේ නම profile.jpg නෙවෙයි නම් (උදා: .png) මේක වෙනස් කරන්න */}
+            <img src="/profile.jpg" alt="Janith Kuruppu" className="profile-img" />
         </div>
         {/* --- Profile Image Section End --- */}
 
@@ -33,7 +31,8 @@ const Home = () => {
           Currently leading IT projects at Smart Scholar Hub.
         </p>
         
-        <a href="/projects" className="btn">View My Work</a>
+        {/* Button එක Link එකක් විදිහට හැදුවා */}
+        <Link to="/projects" className="btn">View My Work</Link>
       </div>
     </motion.div>
   );
