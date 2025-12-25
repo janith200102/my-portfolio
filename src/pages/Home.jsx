@@ -9,13 +9,10 @@ const Home = () => {
     >
       <div style={{ textAlign: 'center', marginTop: '30px' }}>
         
-        {/* --- Profile Image Section Start --- */}
         <div className="img-container">
-            {/* මෙන්න අපි වෙනස් කරපු කොටස */}
-            {/* ඔයාගේ ෆොටෝ එකේ නම profile.jpg නෙවෙයි නම් (උදා: .png) මේක වෙනස් කරන්න */}
-            <img src="/profile.jpg" alt="Janith Kuruppu" className="profile-img" />
+            {/* Make sure the image name matches exactly with the file in the public folder (case-sensitive) */}
+            <img src="/Profile.jpg" alt="Janith Kuruppu" className="profile-img" />
         </div>
-        {/* --- Profile Image Section End --- */}
 
         <motion.h1 
           initial={{ y: -50 }} animate={{ y: 0 }}
@@ -31,8 +28,8 @@ const Home = () => {
           Currently leading IT projects at Smart Scholar Hub.
         </p>
         
-        {/* Button එක Link එකක් විදිහට හැදුවා */}
-        <Link to="/projects" className="btn">View My Work</Link>
+        <Link to="/projects" className="btn">View My Work</Link> 
+        
       </div>
     </motion.div>
   );
